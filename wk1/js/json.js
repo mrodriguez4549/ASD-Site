@@ -1,8 +1,8 @@
 /* 
 	Marco Rodriguez -->
-  	07-19-12 -->
- 	Project 3 -->
-	MIU 1207 -- >
+  	10-24-12 -->
+ 	Project 1 -->
+	ASD 1210 -- >
 */
 
 // JSON file 
@@ -16,11 +16,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Corvette"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 1"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "You guys Rock!"]
 	},
 	"contact2": {
@@ -31,11 +26,6 @@ var json = {
 		"make": 		["Make:", "BMW"],
 		"car": 			["Car:", "M5"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "10's"],
-		"hp": 			["Horse Power:", "500HP"],
-		"adder": 		["Power Adder:", "Single Turbo"],
-		"tranny": 		["Transmission:", "Auto"],
-		"ltech": 		["Referred from LS1Tech.com:", "No"],
 		"comments": 	["Any Comments:", "No thanks!"]
 	},
 	"contact3": {
@@ -46,11 +36,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Corvette"],
 		"caramount": 	["How many cars do you own:", "3"],
-		"fastest": 		["Fastest Time:", "11's"],
-		"hp": 			["Horse Power:", "500HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 1"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "You guys Rock!"]
 	},
 	"contact4": {
@@ -61,11 +46,6 @@ var json = {
 		"make": 		["Make:", "Ford"],
 		"car": 			["Car:", "Mustang Cobra"],
 		"caramount": 	["How many cars do you own:", "3"],
-		"fastest": 		["Fastest Time:", "8's"],
-		"hp": 			["Horse Power:", "600HP"],
-		"adder": 		["Power Adder:", "Single Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Stangs Rock!"]
 	},
 	"contact5": {
@@ -76,11 +56,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Corvette"],
 		"caramount": 	["How many cars do you own:", "1"],
-		"fastest": 		["Fastest Time:", "11's"],
-		"hp": 			["Horse Power:", "500HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 1"],
-		"tranny": 		["Transmission:", "Auto"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Been on Tech for almost 10 years now!"]
 	},
 	"contact6": {
@@ -91,11 +66,6 @@ var json = {
 		"make": 		["Make:", "Toyota"],
 		"car": 			["Car:", "Supra R"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "9's"],
-		"hp": 			["Horse Power:", "800HP"],
-		"adder": 		["Power Adder:", "Single Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Looking for other female racers out there."]
 	},
 	"contact7": {
@@ -106,11 +76,6 @@ var json = {
 		"make": 		["Make:", "Ford"],
 		"car": 			["Car:", "Mustang GT"],
 		"caramount": 	["How many cars do you own:", "1"],
-		"fastest": 		["Fastest Time:", "10's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 2"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "No"],
 		"comments": 	["Any Comments:", "Ford guy looking for tech advice."]
 	},
 	"contact8": {
@@ -121,11 +86,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Camaro SS"],
 		"caramount": 	["How many cars do you own:", "4"],
-		"fastest": 		["Fastest Time:", "10's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Nitrous Direct Port"],
-		"tranny": 		["Transmission:", "Auto"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Looking to buy some parts."]
 	},
 	"contact9": {
@@ -136,11 +96,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Corvette Z07"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "11's"],
-		"hp": 			["Horse Power:", "600HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 2"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Corvette guy looking for some good o'le racing."]
 	},
 	"contact10": {
@@ -151,11 +106,6 @@ var json = {
 		"make": 		["Make:", "Pontiac"],
 		"car": 			["Car:", "TA"],
 		"caramount": 	["How many cars do you own:", "1"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 1"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Need help getting into 11's"]
 	},
 	"contact11": {
@@ -166,11 +116,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Camaro"],
 		"caramount": 	["How many cars do you own:", "3"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "500HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 2"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Anybody from Texas?"]
 	},
 	"contact12": {
@@ -181,11 +126,6 @@ var json = {
 		"make": 		["Make:", "Dodge"],
 		"car": 			["Car:", "Viper AC"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "8's"],
-		"hp": 			["Horse Power:", "900HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 2"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "No"],
 		"comments": 	["Any Comments:", "No thanks!"]
 	},
 	"contact13": {
@@ -196,11 +136,6 @@ var json = {
 		"make": 		["Make:", "Chevrolet"],
 		"car": 			["Car:", "Corvette ZR1"],
 		"caramount": 	["How many cars do you own:", "1"],
-		"fastest": 		["Fastest Time:", "10's"],
-		"hp": 			["Horse Power:", "600HP"],
-		"adder": 		["Power Adder:", "Nitrous Direct Port"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Any fellow Vette guys from the south?"]
 	},
 	"contact14": {
@@ -211,11 +146,6 @@ var json = {
 		"make": 		["Make:", "Ford"],
 		"car": 			["Car:", "AC Cobra"],
 		"caramount": 	["How many cars do you own:", "4"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Single Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Looking to sell my Cobra"]
 	},
 	"contact15": {
@@ -226,11 +156,6 @@ var json = {
 		"make": 		["Make:", "Pontiac"],
 		"car": 			["Car:", "GTO SS"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 1"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "American Muscle"]
 	},
 	"contact16": {
@@ -241,11 +166,6 @@ var json = {
 		"make": 		["Make:", "Ferrari"],
 		"car": 			["Car:", "455ci"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "11's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Single Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Italian Sports Guy looking for some races."]
 	},
 	"contact17": {
@@ -256,11 +176,6 @@ var json = {
 		"make": 		["Make:", "Nissan"],
 		"car": 			["Car:", "GT-R"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "11's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Nitrous Stage 1"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "No"],
 		"comments": 	["Any Comments:", "Any events in Florida?"]
 	},
 	"contact18": {
@@ -271,11 +186,6 @@ var json = {
 		"make": 		["Make:", "Honda"],
 		"car": 			["Car:", "Civic Type-R"],
 		"caramount": 	["How many cars do you own:", "1"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "500HP"],
-		"adder": 		["Power Adder:", "Twin Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "No"],
 		"comments": 	["Any Comments:", "I love Cars"]
 	},
 	"contact19": {
@@ -286,11 +196,6 @@ var json = {
 		"make": 		["Make:", "Toyota"],
 		"car": 			["Car:", "Supra"],
 		"caramount": 	["How many cars do you own:", "3"],
-		"fastest": 		["Fastest Time:", "8's"],
-		"hp": 			["Horse Power:", "800HP"],
-		"adder": 		["Power Adder:", "Twin Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Any Supra guys?"]
 	},
 	"contact20": {
@@ -301,11 +206,6 @@ var json = {
 		"make": 		["Make:", "Honda"],
 		"car": 			["Car:", "Civic Type-R"],
 		"caramount": 	["How many cars do you own:", "4"],
-		"fastest": 		["Fastest Time:", "12's"],
-		"hp": 			["Horse Power:", "400HP"],
-		"adder": 		["Power Adder:", "Single Turbo"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Car show fanatic"]
 	},
 	"contact21": {
@@ -316,11 +216,6 @@ var json = {
 		"make": 		["Make:", "Ford"],
 		"car": 			["Car:", "Mustang Cobra R"],
 		"caramount": 	["How many cars do you own:", "2"],
-		"fastest": 		["Fastest Time:", "10's"],
-		"hp": 			["Horse Power:", "600HP"],
-		"adder": 		["Any Power Adders:", "Nitrous Stage 3"],
-		"tranny": 		["Transmission:", "Manual"],
-		"ltech": 		["Referred from LS1Tech.com:", "Yes"],
 		"comments": 	["Any Comments:", "Who has parts for sale?"]
-	}
-}
+	},
+};
