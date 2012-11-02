@@ -1,77 +1,62 @@
 /* 
 	Marco Rodriguez -->
-  	07-26-12 -->
- 	Project 4 -->
-	MIU 1207 -- >
+  	10-24-12 -->
+ 	Project 1 -->
+	ASD 1210 -- >
 */
 // Javascript file 
 
-//Wait for DOM
-window.addEventListener("DOMContentLoaded", function(){
-	//getElementById Function
-	function ge(x){
-		var theElement = document.getElementById(x);
-		return theElement;
-	}
+$('#home').on('pageinit', function(){
+	//code needed for home page goes here
+});	
+		
+$('#custform').on('pageinit', function(){
 	
-// toggle controls
-
-	function toggleControls(n){
-		switch(n){
-			case "on":
-				ge('contactForm').style.display  	= "none";
-				ge('clear').style.display 			= "inline";
-				ge('displayLink').style.display 	= "none";
-				ge('addNew').style.display 			= "inline";
-				break;
-					// off
-			case "off":
-				ge('contactForm').style.display 	= "block";
-				ge('clear').style.display 			= "inline";
-				ge('displayLink').style.display 	= "inline";
-				ge('addNew').style.display 			= "none";
-				ge('items').style.display 			= "none";
-				break;
-
-			default:
-				return false;		
+	var cForm = $('#contactForm');
+		cForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+			var data = cForm.serializeArray();
+			storeData(data);
 		}
-	}
+	});
+});		
+
+//Any other code needed for addItem page goes here!
+//function ge(x){
+		//var theElement = document.getElementById(x);
+		//return theElement;
+	//};
+
+//The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
 	// stored data function
 	// stores all object data
-
-		function storeData(key){
+	function storeData(key){
 			// if there is no key, this means this is brand new item and we need a new key.
 			if(!key){
-			var id 					= Math.floor(Math.random()*100000001); // math that randomly picks a number to attach to the string
+			var id 			= Math.floor(Math.random()*100000001); // math that randomly picks a number to attach to the string
 			}else{
 				// set the id to the existing key we're editing so that it will save over the data
 				//the key is the same key that's been passed along from the editSubmit event handler
 				// id to the validate function, and then passed here, into the storeData function.
-				id = key;
+			id = key;
 			}
-		getSelectedRadio(); // calling the select radio function
-		getCheckboxValue(); // checkbox value function
-		var item  				= {};
-			item.fname			= ["First Name:", 					ge('fname').value];
-			item.lname			= ["Last Name:", 					ge('lname').value];
-			item.email			= ["Email:", 						ge('email').value];
-			item.date			= ["Date:", 						ge('date').value];
-			item.make			= ["Make:", 						ge('make').value];
-			item.car			= ["Car:", 							ge('car').value];
-			item.caramount		= ["Number of cars you own:", 		ge('caramount').value];
-			item.fastest		= ["Fastest Time:", 				ge('fast').value];
-			item.hp				= ["Horse Power:", 					ge('hpr').value];
-			item.adder			= ["Power Adder:", 					ge('adders').value];
-			item.tranny			= ["Transmission:", 				trannyValue];
-			item.ltech			= ["Referred from LS1Tech.com:", 	siteValue];
-			item.comments		= ["Any Comments:", 				ge('comments').value];
+		var item  			= {};
+			item.fname		= ["First Name:", 				$('#fname').val()];
+			item.lname		= ["Last Name:", 				$('#lname').val()];
+			item.email		= ["Email:", 					$('#email').val()];
+			item.date		= ["Date:", 					$('#date').val()];
+			item.make		= ["Make:", 					$('#make').val()];
+			item.car		= ["Car:", 						$('#car').val()];
+			item.caramount	= ["Number of cars you own:", 	$('#caramount').val()];
+			item.comments	= ["Any Comments:", 			$('#comments').val()];
 
 			// save data stringify
 			localStorage.setItem(id, JSON.stringify(item));
 			alert("Contact Saved!");
-	}
+	};
 
 	// get data
 
@@ -86,18 +71,18 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		ge('items').style.display = "block";
+		$('#items').css("display", "block");
 		for(var i=0, len=localStorage.length; i<len; i++){
 			var makeli = document.createElement('li');
 			var linksLi = document.createElement('li'); // project 3 
 			makeList.appendChild(makeli);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
-			//
+			// Converting the string from local storage
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement('ul');
 			makeli.appendChild(makeSubList);
-			getImage(obj.fastest[1], makeSubList); // adds image to data
+			getImage(obj.fname[1], makeSubList); // adds image to data
 			// loop thru object
 			for(var n in obj){
 				var makeSubli = document.createElement('li');
@@ -108,7 +93,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			} 
 			makeItemLinks(localStorage.key(i), linksLi); // creates our edit and delete buttons
 		}
-	}
+	};
 
 	// get image
 	function getImage(catName, makeSubList){
@@ -117,7 +102,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var newImg = document.createElement('img');
 		var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
 		imageLi.appendChild(newImg);
-	}
+	};
 
 	// auto populate local storage
 	function autoFillData(){
@@ -125,7 +110,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var id = Math.floor(Math.random()*100000001); // math that randomly picks a number to attach to the string
 			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
-	}
+	};
 
 	// make item links
 	// creat edit and delete buttons for stored data
@@ -151,7 +136,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		deleteLink.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
-	}
+	};
 
 	function editItem(){
 		// grab data from local storage
@@ -162,35 +147,21 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("off");
 
 		// populate the form fields with current localStorage values.
-		ge('fname').value = item.fname[1];
-		ge('lname').value = item.lname[1];
-		ge('email').value = item.email[1];
-		ge('date').value = item.date[1];
-		ge('make').value = item.make[1];
-		ge('car').value = item.car[1];
-		ge('caramount').value = item.caramount[1];
-		ge('fast').value = item.fastest[1];
-		ge('hpr').value = item.hp[1];
-		ge('adders').value = item.adder[1];
-		var radios = document.forms[0].tranny;
-		for(var i = 0; i<radios.length; i++){
-			if(radios.value == "Auto" && item.tranny[1] == "Auto"){
-				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "Manual" && item.tranny[1] == "Manual"){
-				radios[i].setAttribute("checked", "checked");
-			}
-		}
-		if(item.ltech[1] == "Yes"){
-			ge('ltech').setAttribute("checked", "checked");
-		}
-		ge('comments').value = item.comments[1];
+		$('#fname').val(item.fname[1]);
+		$('#lname').val(item.lname[1]);
+		$('#email').val(item.email[1]);
+		$('#date').val(item.date[1]);
+		$('#make').val(item.make[1]);
+		$('#car').val(item.car[1]);
+		$('#caramount').val(item.caramount[1]);
+		$('#comments').val(item.comments[1]);
 
 		// remove the initial listener from the input save button
 		save.removeEventListener("click", storeData);
 
 		// change submit button value to edit button
-		ge('submit').value = "Edit Contact";
-		var editSubmit = ge('submit');
+		$('#submit').value = "Edit Contact";
+		var editSubmit = $('#submit');
 
 		//save key value
 		editSubmit.addEventListener("click", validate);
@@ -206,60 +177,99 @@ window.addEventListener("DOMContentLoaded", function(){
 		}else{
 			alert("Contact was not deleted.");
 		}
-	}	
-	// clear local data
+	};	
 
+// toggle controls
+	function toggleControls(n){
+		switch(n){
+			case "on":
+				$('#contactForm').css("display", "none");
+				$('#clear').css("display", "inline");
+				$('#displayLink').css("display", "none");
+				$('#addNew').css("display", "inline");
+				break;
+					// off
+			case "off":
+				$('#contactForm').css("display", "block");
+				$('#clear').css("display", "inline");
+				$('#displayLink').css("display", "inline");
+				$('#addNew').css("display", "none");
+				$('#items').css("display", "none");
+				break;
+			default:
+				return false;		
+		}
+	};
+	//validate needs to be refactored to JQuery
+	//function validate(e){
+		// define elements
+		//var getFname = $('fname');
+		//var getLname = $('lname');
+		//var getEmail = $('email');
+
+		// reset 
+		//errMsg.innerHTML = "";
+			//getFname.style.border = "1px solid black";
+			//getLname.style.border = "1px solid black";
+		//	getEmail.style.border = "1px solid black";
+
+		// error messages
+		//var messageArry = [];
+		// first name validation
+		//if(getFname.value === ""){
+		//	var fNameError = "Please enter your First Name."
+			//getFname.style.border = "1px solid red";
+			//messageArry.push(fNameError);
+		//}
+		// last name validation
+	//	if(getLname.value === ""){
+		//	var lNameError = "Please enter your Last Name."
+		//	getLname.style.border = "1px solid red";
+		//	messageArry.push(lNameError);
+		//}
+		// email validation
+		//var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		//if(!(re.exec(getEmail.value))){
+			//var emailError = "Please enter a valid Email Address.";
+			//getEmail.style.border = "1px solid red";
+			//messageArry.push(emailError);
+	//}
+		//if(messageArry.length >= 1){
+			//for(var i =0, j=messageArry.length; i < j; i++){
+			//	var txt = document.createElement('li');
+			//	txt.innerHTML =messageArry[i];
+			//	errMsg.appendChild(txt);
+		//	}
+		//	e.preventDefault();
+		//	return false;
+	//	}else{
+			// save our data if everything is okay
+		//	storeData(this.key);
+	//	}
+		
+//	};
+
+
+// clear local data
 	function clearLocal(){
 		if(localStorage.length === 0){
 			alert("Nothing to delete."); // alert
 		}else{
 			localStorage.clear();
-			alert("All Data Deleted");
+			alert("All Data Has Been Deleted");
 			window.location.reload();
 			return false;
 		}
-	}
-// validate function that has been added for project assignment 
-	function validate(){
-		var parseContactForm = function(data){
-			storeData(data);
-		};
-
-		$(document).bind('pageinit', function(){
-
-			var cform = $('#contactForm');
-				
-			cform.validate({
-				invalidHandler: function(form, validator){},
-				submitHandler: function(){
-
-					var data = $("#contactForm").serializeArray();
-					localStorage.setItem("formdata", data);
-
-					
-				}
-			})
-
-		});
-	}
+	};
 
 	// array data for the drop down fucnctions called 
-	var fast = ["--ET Time--", "12's", "11's", "10's", "9's", "8's", "7's"],
-		hpr = ["--Horse Power--", "400HP", "500HP", "600HP", "700HP", "800HP", "900HP", "1000HP", "1000HP+"],
-		adders = ["--Power Adders--", "Nitrous Stage 1", "Nitrous Stage 2", "Nitrous Direct Port", "Nitrous Dry Kit", "--Forced Induction--", "Single Turbo", "Twin Turbo", "Single Turbo Meth", "Twin Turbo Race Fuel", "--Supercharged--", "Supercharged F1", "Supercharged F2", "Supercharged F3", "Supercharged F4"],
-		trannyValue // transmission value
-		siteValue = "No" // site value 
-		errMsg = $('errors');
-		;
+	var errMsg = $('#errors');
 
 	//this displays the data
-	var displayLink = ge("displayLink");
-	displayLink.addEventListener("click", getData);
+	$( '#displayLink' ).on( 'click', getData );
 	// clears local data event
-	var clearLink = ge("clear");
-	clearLink.addEventListener("click", clearLocal);
+	$( '#clearLink' ).on( 'click', clearLocal );
 	// submits stored data event 
-	var save = ge("submit");
-	save.addEventListener("click", validate);
+	$( '#submit' ).on( 'click', validate );
 
 });

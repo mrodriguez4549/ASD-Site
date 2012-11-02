@@ -1,7 +1,7 @@
 <!-- Marco Rodriguez -->
-<!-- 07-26-12 -->
-<!-- Project 4 -->
-<!-- MIU 1207 -- >
+<!-- 10-25-12 -->
+<!-- Project 1 -->
+<!-- ASD 1210 -- >
 
 <!-- head starts -->
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
 		
 		<div data-role="content">
 			<h1><img src="images/branding.png" class="img" alt="Gear Heads"/></h1>
-			<p class="para1" style="text-shadow: none">Gear Heads is an app dedicated to performance car enthusiasts.</p>
+			<p class="para1" style="text-shadow: none">Gear Heads is an app dedicated to performance car enthusiasts.</p>
 			<h1><a href="#custform"><img src="images/cta2.png" class="mycta" alt="Join Today!" /></a></h1>
 			<p class="para3" style="text-shadow: none">Browse by category</p>
 
@@ -1354,7 +1354,7 @@
 	<a href="#custform" id="addNew" style="display:none;">Add New Item</a>
 		<br />
 <!-- form starts here -->
-	<form action="" method="post" id="contactForm">
+	<form action="" method="" id="contactForm">
 
 <!-- input type user must input valid text string for first name -->
 	<div data-role="fieldcontain">
@@ -1377,7 +1377,7 @@
 <!-- iput type user inputs the date they are joining -->
 	<div data-role="fieldcontain">
 		<label for="date">Today's Date:</label>
-		<input type="text" name="date" id="date" placeholder="07-19-2012"  class="required"/>
+		<input type="text" name="date" id="date" placeholder="mm/dd/yy"  class="required"/>
 	</div>	
 
 <!-- input type user input make of the vehicle they have -->
@@ -1398,93 +1398,6 @@
 		<input type="range" name="caramount" id="caramount" value="1" min="1" max="10"/>
 	</div>
 
-
-<!-- dropdown type if user goes to the track, he can choose the fastest time his car went at the track-->
-	<div data-role="fieldcontain">
-		<label for="fastest">Best ET Time <small><em>(1/4 mile time)</em></small></label>
-		<select name="fastest" id="fast" data-native-menu="false">
-			<option data-placeholder="true">Best time at the track?</option>
-			<optgroup label="14's - 12.5's">
-				<option value="time1">14's - 13.5's</option>
-				<option value="time2">13.5's - 13's</option>
-				<option value="time3">13's - 12.5's</option>
-			</optgroup>
-			<optgroup label="12.5's - 11's">
-				<option value="time4">12.5's - 12's</option>
-				<option value="time5">12's - 11.5's</option>
-				<option value="time6">11.5's - 11's</option>
-			</optgroup>
-			<optgroup label="11's - 9.5's">
-				<option value="time7">11's - 10.5's</option>
-				<option value="time8">10.5's - 10's</option>
-				<option value="time9">10.'s - 9.5's</option>
-			</optgroup>
-			<optgroup label="9.5's - 8's">
-				<option value="time10">9.5's - 9's</option>
-				<option value="time11">9's - 8.5's</option>
-				<option value="time12">8.5's - 8.0's</option>
-			</optgroup>
-		</select>
-	</div>	
-
-
-<!-- dropdown type user chooses what power ratings his or her vehicle has -->
-	<div data-role="fieldcontain">
-		<label for="hp">Horsepower Ratings <small><em>(Dyno Time)</em></small></label>
-		<select name="hp" id="hp" data-native-menu="false">
-			<option data-placeholder="true">Horse Power</option>
-			<optgroup label="power">
-				<option value="hp1">300hp</option>
-				<option value="hp2">400hp</option>
-				<option value="hp3">500hp</option>
-				<option value="hp4">600hp</option>
-				<option value="hp5">700hp</option>
-				<option value="hp6">800hp</option>
-				<option value="hp7">900hp</option>
-				<option value="hp8">1000hp</option>
-				<option value="hp9">1000hp+</option>
-			</optgroup>
-			
-		</select>
-	</div>	
-
-<!-- dropdown type user chooses what power ratings his or her vehicle has -->
-	<div data-role="fieldcontain">
-		<label for="adder">Power Adders <small><em>(NOS, Turbo, Supercharged)</em></small></label>
-		<select name="adder" id="adder" data-native-menu="false">
-			<option data-placeholder="true">Any Adders</option>
-			<optgroup label="power">
-				<option value="hp1">Naturally Aspirated</option>
-				<option value="hp2">Nitrous</option>
-				<option value="hp3">Turbo Charged</option>
-				<option value="hp4">Turbo Charged</option>
-				<option value="hp5">Super Charged</option>
-			</optgroup>
-			
-		</select>
-	</div>	
-	
-
-<!-- radio button type user chooses what type of transmission his or her vehicle is equipped with-->
-	<div data-role="fieldcontain">
-		<fieldset data-role="controlgroup">
-			<legend>Transmission:</legend>
-			<input type="radio" value="Auto" name="tranny" id="auto"/>
-			<label for="auto">Auto</label>
-			<input type="radio" value="Manual" name="tranny" id="manual"/>
-			<label for="manual">Manual</label>
-		</fieldset>
-	</div>	
-
-<!-- on and off swith type asks user if they where referred from the website ls1tech.com-->
-<div data-role="fieldcontain">
-		<label for="ltech" id="ltech">Referred from LS1Tech?:</label>
-		<select data-role="slider">
-			<option value="off">Yes</option>
-			<option value="on">No</option>
-		</select>	
-	</div>	
-
 <!-- textarea type allows user to leave any additional comments in the textarea-->
 	<div data-role="fieldcontain">	
 		<label for="comments" id="comments">Comments:</label>
@@ -1493,7 +1406,9 @@
 
 <!-- reset and submit type -->
 	<div data-role="fieldcontain">
+		<input type="reset" value="Reset" id="reset" data-theme="b" onClick="window.location.reload()"/>
 		<input type="submit" value="Submit" id="submit" data-theme="b"/>
+
 	</div>	
 	</form>
 
