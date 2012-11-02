@@ -198,6 +198,7 @@ console.log(storeData);
 
 // remove toggle
 // toggle controls
+<<<<<<< HEAD
 	// function toggleControls(n){
 	//	switch(n){
 	//		case "on":
@@ -220,52 +221,75 @@ console.log(storeData);
 //	};
 
 	function validate(e){
+=======
+	function toggleControls(n){
+		switch(n){
+			case "on":
+				$('#contactForm').css("display", "none");
+				$('#clear').css("display", "inline");
+				$('#displayLink').css("display", "none");
+				$('#addNew').css("display", "inline");
+				break;
+					// off
+			case "off":
+				$('#contactForm').css("display", "block");
+				$('#clear').css("display", "inline");
+				$('#displayLink').css("display", "inline");
+				$('#addNew').css("display", "none");
+				$('#items').css("display", "none");
+				break;
+			default:
+				return false;		
+		}
+	};
+	//validate needs to refactored to jquery
+	//function validate(e){
+>>>>>>> 3fd7e6ee956d536e695f4440c789dac8e9d6a6c6
 		// define elements
-		var getFname = $('fname');
-		var getLname = $('lname');
-		var getEmail = $('email');
+		//var getFname = $('fname');
+		//var getLname = $('lname');
+		//var getEmail = $('email');
 
 		// reset 
-		errMsg.innerHTML = "";
-			getFname.style.border = "1px solid black";
-			getLname.style.border = "1px solid black";
-			getEmail.style.border = "1px solid black";
+		//errMsg.innerHTML = "";
+			//getFname.style.border = "1px solid black";
+			//getLname.style.border = "1px solid black";
+			//getEmail.style.border = "1px solid black";
 
 		// error messages
-		var messageArry = [];
+		//var messageArry = [];
 		// first name validation
-		if(getFname.value === ""){
-			var fNameError = "Please enter your First Name."
-			getFname.style.border = "1px solid red";
-			messageArry.push(fNameError);
-		}
+		//if(getFname.value === ""){
+			//var fNameError = "Please enter your First Name."
+			//getFname.style.border = "1px solid red";
+			//messageArry.push(fNameError);
+		//}
 		// last name validation
-		if(getLname.value === ""){
-			var lNameError = "Please enter your Last Name."
-			getLname.style.border = "1px solid red";
-			messageArry.push(lNameError);
-		}
+		//if(getLname.value === ""){
+			//var lNameError = "Please enter your Last Name."
+			//getLname.style.border = "1px solid red";
+			//messageArry.push(lNameError);
+		//}
 		// email validation
-		var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		if(!(re.exec(getEmail.value))){
-			var emailError = "Please enter a valid Email Address.";
-			getEmail.style.border = "1px solid red";
-			messageArry.push(emailError);
-		}
-		if(messageArry.length >= 1){
-			for(var i =0, j=messageArry.length; i < j; i++){
-				var txt = document.createElement('li');
-				txt.innerHTML =messageArry[i];
-				errMsg.appendChild(txt);
-			}
-			e.preventDefault();
-			return false;
-		}else{
+		//var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		//if(!(re.exec(getEmail.value))){
+			//var emailError = "Please enter a valid Email Address.";
+			//getEmail.style.border = "1px solid red";
+			//messageArry.push(emailError);
+		//}
+		//if(messageArry.length >= 1){
+			//for(var i =0, j=messageArry.length; i < j; i++){
+				//var txt = document.createElement('li');
+				//txt.innerHTML =messageArry[i];
+				//errMsg.appendChild(txt);
+			//}
+			//e.preventDefault();
+			//return false;
+		//}else{
 			// save our data if everything is okay
-			storeData(this.key);
-		}
-		
-	};
+			//storeData(this.key);
+		//}	
+	//};
 
 
 // clear local data
