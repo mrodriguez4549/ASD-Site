@@ -1,0 +1,103 @@
+{
+
+	"Resources" :[
+ {
+		"shop":  "Texas Speed Performance",
+		"specialty": "LSX, LS6, LS2",
+		"address": "125 S. Temple, Suite 201",
+		"city": "Dallas",
+		"state": "Texas",
+		"zip": "75208",
+		"phone": "213-345-9999",
+		"email": "tsp@tsp.com"
+
+	},
+	{
+		"shop": "Dallas Speed Works. LP",
+		"specialty": "Supercars ('Ferrari, Lambo, Porsche, Audi, Ford GT-40')",
+		"address": "455 Sycamore Drive, Suite 660",
+		"city": "Dallas",
+		"state": "Texas",
+		"zip": "75211",
+		"phone": "214-444-8899",
+		"email": "dwk@dwk.com"
+
+	},
+	{
+		"shop": "Finish Line Performance",
+		"specialty": "Transmission and Drivetrain",
+		"address":  "8899 Georgewest St.",
+		"city": "Austin",
+		"state": "Texas",
+		"zip": "78890",
+		"phone": "514-788-9999",
+		"email": "fnp@fnp.com"
+		
+	},
+	{
+		"shop":  "Late Model Performance",
+		"specialty": "LSX and Viper",
+		"address":  "112 South Greenville Drive",
+		"city": "Houston",
+		"state": "Texas",
+		"zip": "76588",
+		"phone": "456-777-9999",
+		"email": "lmp@lmp.com"
+		
+	},
+	{
+		"shop": "Air Flow Research",
+		"specialty": "Racing Drivetrain",
+		"address":  "1600 Sierra Madre Circle ",
+		"city": "Placentia",
+		"state": "California",
+		"zip": "92870",
+		"phone": "877-892-8844",
+		"email": "afr@afr.com"
+		
+	},
+	{
+		"shop":  "Burkhart Chassis",
+		"specialty": "Exhaust",
+		"address":  "7360 W. Main St ",
+		"city": "Decatur",
+		"state": "Illinois",
+		"zip": "62522",
+		"phone": "217-855-8660 ",
+		"email": "bch@bch.com"
+		
+	},
+	{
+		"shop": "McLeod Racing",
+		"specialty": "Racing Drivetrain",
+		"address":  " 1600 Sierra Madre Circle ",
+		"city": "Placentia",
+		"state": "California",
+		"zip": "92870",
+		"phone": "714-630-2764",
+		"email": "mcr@mcr.com"
+		
+	},
+	{
+		"shop":  "MagnaFlow Performance Exhaust",
+		"specialty": "Exhaust",
+		"address":  "22961 Arroyo Vista",
+		"city": "Rancho Santa Margarita",
+		"state": "California",
+		"zip": "92688",
+		"phone": "800-824-8664",
+		"email": "mfp@mfp.com"
+		
+	},
+	{
+		"shop":  "LG Motorsports",
+		"specialty": "LSX Corvette",
+		"address":  "1100 Progress Ave.",
+		"city": "Plano",
+		"state": "Texas",
+		"zip": "75602",
+		"phone": "972-345-6677",
+		"email": "lgm@lgm.com"
+		
+	}]
+	}
