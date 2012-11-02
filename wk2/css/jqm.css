@@ -8,7 +8,7 @@
 /* jqm overrride css styles */
 /* branding header logo */
 .ui-btn-up-c {
-    border-top: 1px solid #ccc;
+    border-top: none;
     background: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241)) repeat scroll 0% 0% rgb(238, 238, 238);
     font-weight: bold;
     color: #999;
