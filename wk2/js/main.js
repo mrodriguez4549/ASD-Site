@@ -1,8 +1,8 @@
 /* 
 	Marco Rodriguez -->
-  	10-24-12 -->
- 	Project 1 -->
-	ASD 1210 -- >
+  	11-01-12 -->
+ 	Project 2 -->
+	ASD 1211 -- >
 */
 // Javascript file 
 
@@ -11,6 +11,9 @@ $('#home').on('pageinit', function(){
 });	
 		
 $('#custform').on('pageinit', function(){
+
+	delete $.validator.methods.date;
+
 	var cForm = $('#contactForm'),
 		errorslink = $('#errorslink')
 		;
@@ -22,10 +25,10 @@ $('#custform').on('pageinit', function(){
 			$("#errors ul").html("");
 			for(var key in validator.submitted){
 				var label = $('label[for^="'+ key +'"]').not('[generated]');
-				//var legend = label.closest('fieldset').find('.ui-controlgroup-label');
-				//var fieldname = legend.length ? legend.text() : label.text();
-				//html += '<li>' + fieldname +'</li>';
-				console.log(label.text());
+				var legend = label.closest('fieldset').find('.ui-controlgroup-label');
+				var fieldname = legend.length ? legend.text() : label.text();
+				html += '<li>' + fieldname +'</li>';
+				
 			};
 			$("#errors ul").html(html);
 		},
@@ -39,14 +42,23 @@ $('#custform').on('pageinit', function(){
 
 //any other code needed for addItem page goes here
 
-	//this displays the data
-	$( '#displayLink' ).on( 'click', getData );
-	// clears local data event
-	$( '#clearLink' ).on( 'click', clearLocal );
-	// submits stored data event 
-	$( '#submit' ).on( 'click', validate );
+	
+$('#displaylink').on('click', function(){ // display link gets data
+	getData();
+});	
+$('#clearbutton').on('click', function(){ // clear button clears the data
+	clearLocal();
+});
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
+// auto populate local storage
+	function autoFillData(){
+		for(var n in json){
+			var id = Math.floor(Math.random()*100000001); // math that randomly picks a number to attach to the string
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		};
+	};
 
 	// stored data function
 	// stores all object data
@@ -74,24 +86,34 @@ $('#custform').on('pageinit', function(){
 			localStorage.setItem(id, JSON.stringify(item));
 			alert("Contact Saved!");
 	};
-console.log(storeData);
+	
 	// get data
-
 	function getData(){
-		toggleControls("on");
+		//toggleControls("on");
 		if(localStorage.length ===0){
-			alert("There is no data in local storage so default data was added."); // alert
+			var ask = confirm("No current member data saved. Do you want to load test data?");
+		if (ask){
 			autoFillData();
-		}
+		};
+	};
+		$('#data').empty(); // adding
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
-		$('#items').css("display", "block");
-		for(var i=0, len=localStorage.length; i<len; i++){
+
+		makeList.setAttribute("id", "itemslist"); // adding 
+		makeDiv.appendChild(makeList); // adding
+		$('#data').append(makeDiv); // adding
+		$('#items').show; // adding
+
+
+		for(var i=0, j=localStorage.length; i<j; i++){ // j
 			var makeli = document.createElement('li');
-			var linksLi = document.createElement('li'); // project 3 
+			var linksLi = document.createElement('li'); 
+
+			makeli.setAttribute("id", "displaylist"); // look into
+
 			makeList.appendChild(makeli);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
@@ -99,20 +121,21 @@ console.log(storeData);
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement('ul');
 			makeli.appendChild(makeSubList);
-			getImage(obj.fname[1], makeSubList); // adds image to data
+			getImage(obj.make[1], makeSubList); // adds image to data
 			// loop thru object
 			for(var n in obj){
 				var makeSubli = document.createElement('li');
 				makeSubList.appendChild(makeSubli);
-				var optSubText = obj[n][0]+" "+obj[n][1];
+				var optSubText = obj[n][0] + obj[n][1]; // look into
 				makeSubli.innerHTML = optSubText;
 				makeSubList.appendChild(linksLi); // project 3
 			} 
 			makeItemLinks(localStorage.key(i), linksLi); // creates our edit and delete buttons
+		console.log(getData);
 		};
 	};
 
-	// get image
+	// needs refactoring
 	function getImage(catName, makeSubList){
 		var imageLi = document.createElement('li');
 		makeSubList.appendChild(imageLi);
@@ -121,27 +144,21 @@ console.log(storeData);
 		imageLi.appendChild(newImg);
 	};
 
-	// auto populate local storage
-	function autoFillData(){
-		for(var n in json){
-			var id = Math.floor(Math.random()*100000001); // math that randomly picks a number to attach to the string
-			localStorage.setItem(id, JSON.stringify(json[n]));
-		}
-	};
+	
 
 	// make item links
-	// creat edit and delete buttons for stored data
+	// create edit and delete buttons for stored data
 
 	function makeItemLinks(key, linksLi){
 		var editLink = document.createElement('a');
-		editLink.href = "#custform";
+		editLink.href = "#custform"; // shows up sometimes, then it doesn't?
 		editLink.key = key;
 		var editText = "Edit Contact";
 		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
 		
-		// line break
+		// appends line break to local storage between edit and delete
 		var breakTag = document.createElement('br');
 		linksLi.appendChild(breakTag);
 
@@ -161,7 +178,7 @@ console.log(storeData);
 		var item = JSON.parse(value);
 
 		// show form
-		toggleControls("off");
+		//toggleControls("off");
 
 		// populate the form fields with current localStorage values.
 		$('#fname').val(item.fname[1]);
@@ -183,106 +200,62 @@ console.log(storeData);
 		//save key value
 		editSubmit.addEventListener("click", validate);
 		editSubmit.key = this.key;
-	}
+	};
 	
 	function deleteItem(){
 		var ask = confirm("Are you sure you want to delete?");
 		if(ask){
 			localStorage.removeItem(this.key);
 			alert("Contact was deleted!");
-			window.location.reload();
+			//window.location.reload();
+			getData();
 		}else{
 			alert("Contact was not deleted.");
-		}
+		};
 	};	
-
-// remove toggle
-// toggle controls
-	// function toggleControls(n){
-	//	switch(n){
-	//		case "on":
-	//			$('#contactForm').css("display", "none");
-	//			$('#clear').css("display", "inline");
-	//			$('#displayLink').css("display", "none");
-	//			$('#addNew').css("display", "inline");
-	//			break;
-	//				// off
-	//		case "off":
-	//			$('#contactForm').css("display", "block");
-	//			$('#clear').css("display", "inline");
-	//			$('#displayLink').css("display", "inline");
-	//			$('#addNew').css("display", "none");
-	//			$('#items').css("display", "none");
-	//			break;
-	//		default:
-	//			return false;		
-//		}
-//	};
-
-	function validate(e){
-		// define elements
-		var getFname = $('fname');
-		var getLname = $('lname');
-		var getEmail = $('email');
-
-		// reset 
-		errMsg.innerHTML = "";
-			getFname.style.border = "1px solid black";
-			getLname.style.border = "1px solid black";
-			getEmail.style.border = "1px solid black";
-
-		// error messages
-		var messageArry = [];
-		// first name validation
-		if(getFname.value === ""){
-			var fNameError = "Please enter your First Name."
-			getFname.style.border = "1px solid red";
-			messageArry.push(fNameError);
-		}
-		// last name validation
-		if(getLname.value === ""){
-			var lNameError = "Please enter your Last Name."
-			getLname.style.border = "1px solid red";
-			messageArry.push(lNameError);
-		}
-		// email validation
-		var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		if(!(re.exec(getEmail.value))){
-			var emailError = "Please enter a valid Email Address.";
-			getEmail.style.border = "1px solid red";
-			messageArry.push(emailError);
-		}
-		if(messageArry.length >= 1){
-			for(var i =0, j=messageArry.length; i < j; i++){
-				var txt = document.createElement('li');
-				txt.innerHTML =messageArry[i];
-				errMsg.appendChild(txt);
-			}
-			e.preventDefault();
-			return false;
-		}else{
-			// save our data if everything is okay
-			storeData(this.key);
-		}
-		
-	};
-
 
 // clear local data
 	function clearLocal(){
 		if(localStorage.length === 0){
-			alert("Nothing to delete."); // alert
-		}else{
-			localStorage.clear();
-			alert("All Data Has Been Deleted");
-			window.location.reload();
+			alert("There are is no current data to clear!");
+		} else{
+			var ask = confirm("Are you sure you want to clear all saved data?");
+			if(ask){
+				localStorage.clear();
+				alert("Local Storage has been deleted! You will now be directed back to the home page. Enjoy!");
+			};
 			return false;
-		}
-	};
+		};
 
-	// array data for the drop down fucnctions called 
-	var errMsg = $('#errors');
+};
+// end of customer form and local storage js
 
-	
 
-});
+ //AJAX starts here
+    
+      $("#json").on("click", function(){
+		$("#ajaxJson").empty(); // empty out current data
+		$.ajax({ // ajax call for json data
+			url: "xhr/data.json",
+			type: "GET",
+			dataType: "json",
+			success: function(json){
+				alert("Congratulations, JSON Data is now loaded."); // alert 
+				for(var i = 0, j = json.Resources.length; i < j; i++){
+                    var resources = json.Resources[i]; 
+                    $('' +
+	                    '<li><p><strong> Shop:</strong> ' + '<em>' + resources.shop + '</em>' + '</p>'+
+	                    '<p><strong> Specialty:</strong> ' + '<em>' + resources.specialty + '</em>' + '</p>'+
+	                    '<p><strong> Address:</strong> ' + '<em>' + resources.address + '</em>' + '</p>'+
+	                    '<p><strong> City:</strong> ' + '<em>' + resources.city + '</em>' + '</p>'+
+	                    '<p><strong> State:</strong> ' + '<em>' + resources.state + '</em>' + '</p>'+
+	                    '<p><strong> State:</strong> ' + '<em>' + resources.state + '</em>' + '</p>'+
+	                    '<p><strong> Zip Code:</strong> ' + '<em>' + resources.zip + '</em>' + '</p>'+
+	                    '<p><strong> Email:</strong> ' + '<em>' + resources.email + '</em>' + '</p></li>'
+
+                    ).appendTo('#ajaxJson');  // append json to the id ajaxJson  
+                }
+				$("#ajaxJson").listview('refresh');
+			},
+		});
+	});
