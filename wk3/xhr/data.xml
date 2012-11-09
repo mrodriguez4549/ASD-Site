@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Members>
+	<Member>
+		<fName>Eric</fName>
+		<lName>Boyer</lName>
+		<email>email@email.com</email>
+		<date>12/24/2012</date>
+		<make>Chevrolet</make>
+		<car>Corvette</car>
+		<vehicles>2</vehicles>
+		<comments>Not right now!</comments>
+
+	</Member>
+	<Member>
+		<fName>Jay</fName>
+		<lName>Butler</lName>
+		<email>camaroguy99@gmail.com</email>
+		<date>2012-06-24</date>
+		<make>Mazda</make>
+		<car>RX-7</car>
+		<vehicles>4</vehicles>
+		<comments>Looking to buy some parts.</comments>
+
+	</Member>
+	<Member>
+		<fName>Doug</fName>
+		<lName>Bates</lName>
+		<email>doug_bates_4599@aol.com</email>
+		<date>2012-06-27</date>
+		<make>Ferrari</make>
+		<car>455ci</car>
+		<vehicles>2</vehicles>
+		<comments>Italian Sports Guy looking for some races.</comments>
+
+	</Member>
+	<Member>
+		<fName>Gillie</fName>
+		<lName>Fuller</lName>
+		<email>mr_gillie_2488@aol.com</email>
+		<date>2012-06-28</date>
+		<make>Mitsubishi</make>
+		<car>Eclipse R</car>
+		<vehicles>2</vehicles>
+		<comments>Who has parts for sale?</comments>
+
+	</Member>
+	<Member>
+		<fName>Ray</fName>
+		<lName>Biglsley</lName>
+		<email>raytheman@gmail.com</email>
+		<date>2012-06-26</date>
+		<make>Firehawk</make>
+		<car>TA</car>
+		<vehicles>3</vehicles>
+		<comments>Anybody from Texas?</comments>
+
+	</Member>
+</Members>

@@ -1,12 +1,17 @@
 /* 
 	Marco Rodriguez
-	Project 3
-	11-05-12
-	ASD 1211
+	Project 4
+	07-26-12
+	MIU 1207
 */	
 
 /* jqm overrride css styles */
 /* branding header logo */
+.header h2 {
+	color: #6699cc;
+	text-align: left;
+	margin-left: 15px;
+}
 .ui-btn-up-c {
     border-top: 1px solid #ccc;
     background: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241)) repeat scroll 0% 0% rgb(238, 238, 238);

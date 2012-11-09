@@ -1,7 +1,7 @@
 /* 
 	Marco Rodriguez -->
-  	11-05-12 -->
- 	Project 3 -->
+  	11-01-12 -->
+ 	Project 2 -->
 	ASD 1211 -- >
 */
 // Javascript file 
@@ -232,7 +232,7 @@ $('#clearbutton').on('click', function(){ // clear button clears the data
 
 
  //AJAX starts here
-    
+    // Load Json Data
       $("#json").on("click", function(){
 		$("#ajaxJson").empty(); // empty out current data
 		$.ajax({ // ajax call for json data
@@ -243,19 +243,96 @@ $('#clearbutton').on('click', function(){ // clear button clears the data
 				alert("Congratulations, JSON Data is now loaded."); // alert 
 				for(var i = 0, j = json.Resources.length; i < j; i++){
                     var resources = json.Resources[i]; 
-                    $('' +
+
+                    $('' + 
 	                    '<li><p><strong> Shop:</strong> ' + '<em>' + resources.shop + '</em>' + '</p>'+
 	                    '<p><strong> Specialty:</strong> ' + '<em>' + resources.specialty + '</em>' + '</p>'+
 	                    '<p><strong> Address:</strong> ' + '<em>' + resources.address + '</em>' + '</p>'+
 	                    '<p><strong> City:</strong> ' + '<em>' + resources.city + '</em>' + '</p>'+
 	                    '<p><strong> State:</strong> ' + '<em>' + resources.state + '</em>' + '</p>'+
-	                    '<p><strong> State:</strong> ' + '<em>' + resources.state + '</em>' + '</p>'+
 	                    '<p><strong> Zip Code:</strong> ' + '<em>' + resources.zip + '</em>' + '</p>'+
+	                    '<p><strong> Phone:</strong> ' + '<em>' + resources.phone + '</em>' + '</p>'+
 	                    '<p><strong> Email:</strong> ' + '<em>' + resources.email + '</em>' + '</p></li>'
 
                     ).appendTo('#ajaxJson');  // append json to the id ajaxJson  
                 }
 				$("#ajaxJson").listview('refresh');
+				$('.json').append('<h2>Resources</h2>').addClass('header'); // append h2 header for resources and add the class of header styles
+
 			},
 		});
 	});
+
+
+//load XML Data
+	$("#xml").on("click", function(){
+		$("#ajaxXML").empty(); // empty out data
+		$.ajax({ // ajax call for xml data
+			url: "xhr/data.xml",
+			type: "GET",
+			dataType: "xml",
+			success: function(xml){
+				alert("Congratulations, XML Data is now loaded."); // alert
+	            $(xml).find("Member").each(function(){
+
+	                var fName 		= $(this).find('fName').text(),
+	                	lName 		= $(this).find('lName').text(),
+	                	email 		= $(this).find('email').text(),
+	                	date 		= $(this).find('date').text(),
+	                	make 		= $(this).find('make').text(),
+	                	car 		= $(this).find('car').text(),
+	                	vehicles 	= $(this).find('vehicles').text(),
+	                	comments 	= $(this).find('comments').text();
+
+	                $('' +
+                        '<li><p><strong> First Name:</strong> ' + '<em>' + fName + '</em>' + '</p>' +
+                        '<p><strong> Last Name:</strong> ' + '<em>' + lName + '</em>' + '</p>' +
+                        '<p><strong> Email:</strong> ' + '<em>' + email + '</em>' + '</p>' +
+                        '<p><strong> Date:</strong> ' + '<em>' + date + '</em>' + '</p>' + 
+                        '<p><strong> Make:</strong> ' + '<em>' + make + '</em>' + '</p>' +
+                        '<p><strong> Car:</strong> ' + '<em>' + car + '</em>' + '</p>' +
+                        '<p><strong> Vehicles:</strong> ' + '<em>' + vehicles + '</em>' + '</p>' +
+                        '<p><strong> Comments:</strong> ' + '<em>' + comments + '</em>' + '</p></li>'
+                       
+	                ).appendTo('#ajaxXML');
+
+	            });
+				 $("#ajaxXML").listview('refresh');
+				 $('.xml').append('<h2>Members</h2>').addClass('header'); // append h2 header for resources and add the class of header styles
+
+			},
+		});
+	});
+
+
+ // Load CSV Data
+     $('#csv').on('click', function () {
+     		$('#ajaxCSV').empty(); // empty out data
+     		$.ajax({
+     		    url: "xhr/data.csv",
+     		    type: "GET",
+     		    dataType: "text",
+     		    success: function (data) {
+     		    	alert("Congratulations, CSV Data is now loaded."); // alert
+     		    	var lines = data.split("\n");
+     		    	for (var lineNum = 1; lineNum < lines.length; lineNum++) {
+     		    	    var row = lines[lineNum];
+     		    	    var columns = row.split(",");
+
+     		    	    $('' +
+     		    	    	'<li><p><strong> Item:</strong> ' + '<em>' + columns[0] + '</em>' + '</p>' +
+     		    			'<p><strong> Description:</strong> ' + '<em>' + columns[1] + '</em>' + '</p>' +
+     		    	    	'<p><strong> Model:</strong> ' + '<em>' + columns[2] + '</em>' + '</p>' +
+     		    	    	'<p><strong> Price:</strong> ' + '<em>' + columns[3] + '</em>' + '</p>' +
+     		    	    	'<p><strong> Location:</strong> ' + '<em>' + columns[4] + '</em>' + '</p>' +
+     		    	    	'<p><strong> Shipping:</strong> ' + '<em>' + columns[5] + '</em>' + '</p>' +
+     		    	    	'<p><strong> Pickup:</strong> ' + '<em>' + columns[6] + '</em>' + '</p>' +
+     		    	    	'<p><strong> Trades:</strong> ' + '<em>' + columns[7] + '</em>' + '</p></li>'
+     		    	    	
+     		    	    ).appendTo('#ajaxCSV');
+     		    	}
+     		    	$('#ajaxCSV').listview('refresh');
+     		    	 $('.csv').append('<h2>Classifieds</h2>').addClass('header'); // append h2 header for resources and add the class of header styles
+     		 },
+     	});
+    });

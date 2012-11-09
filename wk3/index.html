@@ -1,6 +1,6 @@
 <!-- Marco Rodriguez -->
-<!-- 11-05-12 -->
-<!-- Project 3 -->
+<!-- 11-01-12 -->
+<!-- Project 2 -->
 <!-- ASD 1211 -- >
 
 <!-- head starts -->
@@ -1497,7 +1497,7 @@
 		</div>
 	</div>
 
-<!-- display ajax data storage -->
+<!-- display ajax json csv xml data storage -->
 
 	<div data-role="page" id="ajax">
 		<div data-role="header" data-position="fixed">
@@ -1507,16 +1507,33 @@
 		<!-- buttons to populate data -->
 		<div data-role="content" id="data">
 			<div data-role="controlgroup" data-type="horizontal" >
-			<a id="json" href="#jsonData" data-role="button">JSON Data</a>
-			<a id="" href="#" data-role="button">XML Data</a> <!-- still working on it -->
-			<a id="" href="#" data-role="button">CSV Data</a> <!-- still working on it -->
+			<a id="json" href="#jsonData" data-role="button"  data-inline="true">JSON</a>
+			<a id="xml" href="#xmlData" data-role="button" data-inline="true">XML</a>
+			<a id="csv" href="#csvData" data-role="button" data-inline="true">CSV</a>
 			</div>
-
 		</div>
+
 		<!-- Ajax JSON data -->		
 		<div id="jsonData">
+			<div class="json"></div>
 			<ul data-role="listview" id="ajaxJson">
-				<!-- data goes here -->
+			<!-- ajax json data displays here -->
+			</ul>
+		</div>
+
+		<!-- Ajax XML data -->		
+		<div id="xmlData" data-role="listview">
+			<div class="xml"></div>
+			<ul data-role="listview" id="ajaxXML">
+			<!-- ajax xml data displays here -->
+			</ul>
+		</div>
+
+		<!-- Ajax CSV data -->		
+		<div id="csvData" data-role="listview">
+			<div class="csv"></div>
+			<ul data-role="listview" id="ajaxCSV">
+			<!-- ajax csv data displays here -->
 			</ul>
 		</div>
 		
