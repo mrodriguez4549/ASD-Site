@@ -19,8 +19,9 @@
 #elink {
 	font-size: 12px;
 }
-.individual h3 {
+.singlepage h2 {
 		color: #6699cc;
+		text-align: left;
 }
 .header h2 {
 	color: #6699cc;
