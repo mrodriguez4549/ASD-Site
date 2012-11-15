@@ -1,3 +1,9 @@
+<!-- Marco Rodriguez -->
+<!-- 11-01-12 -->
+<!-- Project 2 -->
+<!-- ASD 1211 -- >
+
+<!-- head starts -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,31 +11,33 @@
 	<meta charset="utf-8">
 	
 	<title>Gear Heads</title>
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="jqm.css" />
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="css/jqm.css" />
+	<link rel="stylesheet" href="css/styles.css" />
 
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-	
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
 </head>
 <body>
-<!-- home page -->
-<div data-role="page" id="home" style="background:url(bground2.jpg); background-attachment: fixed; background-position: top center; background-repeat: repeat;" data-theme="a">
+
+	<div data-role="page" id="home" style="background:url(images/bground2.jpg); background-attachment: fixed; background-position: top center; background-repeat: repeat;" data-theme="a">
 		
 		<div data-role="content">
-			<h1><img src="branding.png" class="img" alt="Gear Heads"/></h1>
+			<h1><img src="images/branding.png" class="img" alt="Gear Heads"/></h1>
 			<p class="para1" style="text-shadow: none">Gear Heads is an app dedicated to performance car enthusiasts.</p>
-			<h1><a href="#custform"><img src="cta2.png" class="mycta" alt="Join Today!" /></a></h1>
+			<h1><a href="#custform"><img src="images/cta2.png" class="mycta" alt="Join Today!" /></a></h1>
 			<p class="para3" style="text-shadow: none">Browse by category</p>
 
 		<!-- category section goes here -->	
@@ -44,14 +52,13 @@
 			<p class="para1" style="text-shadow: none">gearheads | copyright&copy; 2012</p>
 		</div>
 	</div>
-<!-- ends -->
 
 <!-- members section goes here -->
 
-	<div data-role="page" id="members"  style="background:url(bground2.jpg) repeat;" data-theme="c">
+	<div data-role="page" id="members"  style="background:url(images/bground2.jpg) repeat;" data-theme="c">
 
 			<div data-role="header" data-position="fixed">
-<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
+<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->	
 		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>				
 		<h1>Members</h1>
 			</div>
@@ -100,10 +107,10 @@
 
 <!-- members a-e -->		
 
-<div data-role="page" id="ae" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="ae" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 		<div data-role="header" data-position="fixed">
-<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
+<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->	
 		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 		<h1>A - E</h1>
 			</div>
@@ -113,7 +120,7 @@
 			<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_1.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_1.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -130,7 +137,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_2.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_2.jpg"  width="115" alt="hre" class="img"/>
 					<br /></div></div>
 				
 					<div class="ui-block-b"> 
@@ -147,7 +154,7 @@
 			<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_3.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_3.jpg"  width="115" alt="hre" class="img"/>
 					<br /></div></div>
 				
 					<div class="ui-block-b"> 
@@ -165,7 +172,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_4.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_4.jpg"  width="115" alt="hre" class="img"/>
 					<br /></div></div>
 				
 					<div class="ui-block-b"> 
@@ -194,13 +201,13 @@
 				</div>
 			</div>
 		</div>
-		
+
 <!-- members f-j -->		
 
-<div data-role="page" id="fj"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="fj"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 		<div data-role="header" data-position="fixed">
-<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
+<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->	
 		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 		<h1>F - J</h1>
 			</div>
@@ -210,7 +217,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_5.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_5.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -226,7 +233,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_6.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_6.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -242,7 +249,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_7.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_7.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -258,7 +265,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_8.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_8.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -282,14 +289,15 @@
 					</ul>	
 				</div>
 			</div>
-		</div>				
-		
+		</div>		
+
+
 <!-- members k-o -->		
 
-<div data-role="page" id="ko"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="ko"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>K - O</h1>
 			</div>
@@ -299,7 +307,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_9.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_9.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -315,7 +323,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_10.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_10.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -331,7 +339,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_11.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_11.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -347,7 +355,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_12.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_12.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -376,10 +384,10 @@
 
 <!-- members k-o -->		
 
-<div data-role="page" id="pt"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="pt"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>P - T</h1>
 			</div>
@@ -389,7 +397,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_13.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_13.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -405,7 +413,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_14.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_14.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -421,7 +429,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_15.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_15.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -437,7 +445,7 @@
 			<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_16.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_16.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -466,10 +474,10 @@
 
 <!-- members k-o -->		
 
-<div data-role="page" id="uz"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="uz"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>U - Z</h1>
 			</div>
@@ -479,7 +487,7 @@
 			<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_17.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_17.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -495,7 +503,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_18.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_18.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -511,7 +519,7 @@
 				<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_19.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_19.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -527,7 +535,7 @@
 			<div class="ui-grid-a" data-theme="a">
 
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-a"><img src="member_20.jpg"  width="115" alt="hre" class="img"/>
+						<div class="ui-bar ui-bar-a"><img src="images/members/member_20.jpg"  width="115" alt="hre" class="img"/>
 					</div></div>
 				
 					<div class="ui-block-b"> 
@@ -551,15 +559,15 @@
 					</ul>	
 				</div>
 			</div>
-		</div>		
-		
-<!-- gallery section goes here -->
+		</div>				
+
+		<!-- gallery section goes here -->
 
 
-	<div data-role="page" id="gallery"  style="background:url(bground2.jpg) repeat;" data-theme="a">
+	<div data-role="page" id="gallery"  style="background:url(images/bground2.jpg) repeat;" data-theme="a">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>Gallery</h1>
 
@@ -570,36 +578,36 @@
 				<div class="ui-grid-b">
 					<!-- gallery grid content images -->
 
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery1.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery9.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery3.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery4.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery5.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery6.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery7.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery8.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery2.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery10.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery11.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery12.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery13.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery14.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery15.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery16.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery17.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery18.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery19.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery20.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery21.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery22.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery23.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery24.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery25.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery26.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery27.jpg" /></div></div>
-					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="gallery28.jpg" /></div></div>
-					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="gallery29.jpg" /></div></div>
-					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="gallery30.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery1.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery9.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery3.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery4.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery5.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery6.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery7.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery8.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery2.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery10.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery11.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery12.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery13.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery14.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery15.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery16.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery17.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery18.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery19.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery20.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery21.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery22.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery23.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery24.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery25.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery26.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery27.jpg" /></div></div>
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery28.jpg" /></div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery29.jpg" /></div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="images/gallery/gallery30.jpg" /></div></div>
 			</div>
 			</div>
 
@@ -616,10 +624,10 @@
 
 <!-- resources section goes here -->
 
-	<div data-role="page" id="resources"  data-theme="a" style="background:url(bground2.jpg) repeat;" >
+	<div data-role="page" id="resources"  data-theme="a" style="background:url(images/bground2.jpg) repeat;" >
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Resources</h1>
 
@@ -630,7 +638,7 @@
 				<div data-role="collapsible-set" >
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Tires &amp; Wheels</h3>
-							<h1><img src="resources_hre.png" alt="hre" class="img"/></h1>
+							<h1><img src="images/resources/resources_hre.png" alt="hre" class="img"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>HRE Performance Wheels</strong><br />
 								2611 Commerce Way, Suite D<br />
@@ -647,7 +655,7 @@
 
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Exterior</h3>
-							<h1><img src="resources_vfn.png" alt="hre" class="img"/></h1>
+							<h1><img src="images/resources/resources_vfn.png" alt="hre" class="img"/></h1>
 							<p class="para1" style="text-shadow: none"><strong>VFN Fiberglass Inc.</strong><br />
 								330 W, Factory Rd.<br />
 								Addison, IL 60101<br />
@@ -662,7 +670,7 @@
 
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Forced Induction &amp; Nitrous </h3>
-							<h1><img src="resource_tr.png" alt="Thunder Racing" class="img"/></h1>
+							<h1><img src="images/resources/resource_tr.png" alt="Thunder Racing" class="img"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>Thunder Performance Group, Inc.</strong><br />
 								6225 Hollyfield Dr.<br />
@@ -681,7 +689,7 @@
 						</div>
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>HP-Tuners / Tunning</h3>
-							<h1><img src="resources_katech.png" alt="Katech Performance" class="img"/></h1>
+							<h1><img src="images/resources/resources_katech.png" alt="Katech Performance" class="img"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>Katech Performace</strong><br />
 							
@@ -702,7 +710,7 @@
 						</div>
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Tech Magazine</h3>
-							<h1><img src="resources_gmht.png" alt="GM High Tech" class="img"/></h1>
+							<h1><img src="images/resources/resources_gmht.png" alt="GM High Tech" class="img"/></h1>
 							<p class="para1" style="text-shadow: none"><strong>GM High Tech</strong><br />
 								365 West Passaic St.<br />
 								Rochelle Park, NJ 07662.<br />
@@ -724,7 +732,7 @@
 
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Performance Parts</h3>
-							<h1><img src="resources_summit.png" alt="Summit Racing" class="img"/></h1>
+							<h1><img src="images/resources/resources_summit.png" alt="Summit Racing" class="img"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>Summit Performance Parts</strong><br />
 								2611 Commerce Way, Suite D<br />
@@ -741,7 +749,7 @@
 
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Air Flow / Exhaust</h3>
-							<h1><img src="resources_afr.png" alt="AirFlow Research" class="img"/></h1>
+							<h1><img src="images/resources/resources_afr.png" alt="AirFlow Research" class="img"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>Air Flow Research</strong><br />
 								28611 W. Industry Drive<br />
@@ -756,7 +764,7 @@
 						</div>
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Classic Performance</h3>
-							<h1><img src="resources_slp.png" alt="hre" class="SLP Parts"/></h1>
+							<h1><img src="images/resources/resources_slp.png" alt="hre" class="SLP Parts"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>SLP Muscle Car Central</strong><br />
 								1501 Industrial Way North<br />
@@ -773,7 +781,7 @@
 						</div>
 						<div data-role="collapsible" data-collapsed="true" data-theme="c">
 							<h3>Fabrication Engineering</h3>
-							<h1><img src="resources_dsport.png" alt="Diablo Sport" class="img"/></h1>
+							<h1><img src="images/resources/resources_dsport.png" alt="Diablo Sport" class="img"/></h1>
 							<p class="para1" style="text-shadow: none">
 								<strong>DiabloSport, Inc.</strong><br />
 								Corporate Headquarters<br />
@@ -795,14 +803,14 @@
 					</ul>	
 				</div>
 			</div>
-		</div>		
-				
+		</div>
+
 <!-- classifieds section goes here -->
 
-	<div data-role="page" id="classifieds"  data-theme="a" style="background:url(bground2.jpg) repeat;" data-theme="a">
+	<div data-role="page" id="classifieds"  data-theme="a" style="background:url(images/bground2.jpg) repeat;" data-theme="a">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Classifieds</h1>
 			</div>
@@ -812,14 +820,14 @@
 				<ul data-role="listview" data-filter="true" data-inset="true" data-theme="c">
 					<li>
 						<a href="#mt">	
-							<img src="classifieds_mt.png" class="imgnews"/>
+							<img src="images/classifieds/classifieds_mt.png" class="imgnews"/>
 							<h3>Mickey Thompson ET Street Series tires</h3>
 							<p>Mickey Thompson ET Street Series tires have passed D.O.T. requirements but have reduced tread depth and compounds designed for racing.</p>
 						</a>	
 					</li>
 					<li>
 						<a href="#tach">
-							<img src="classifieds_tach.png" />
+							<img src="images/classifieds/classifieds_tach.png" />
 							<h3>Pro-Shift Lite </h3>
 							<p>The Pro-Shift Lite can trigger your shift point without a tachometer.</p>
 
@@ -827,7 +835,7 @@
 					</li>
 					<li>
 						<a href="#helmet">
-							<img src="classifieds_helmet.png"/>							
+							<img src="images/classifieds/classifieds_helmet.png"/>							
 							<h3>Black-Ops Carbon Fiber Helmets </h3>
 							<p>The Z9-MRR is proof of Zeronine’s ongoing mission to manufacture helmets that offer the superior impact resistance of real Carbon Fiber while keeping added weight and cost to the bare minimum.</p>
 
@@ -835,7 +843,7 @@
 					</li>
 					<li>
 						<a href="#tools">
-							<img src="classifieds_tools.png"/>							
+							<img src="images/classifieds/classifieds_tools.png"/>							
 							<h3>A-Arm Support Brace </h3>
 							<p>BMR's A-arm support bolts to the rear mount of the front A-arms</p>
 
@@ -843,7 +851,7 @@
 					</li>
 					<li>
 						<a href="#rear">	
-							<img src="classifieds_rear.png"/>							
+							<img src="images/classifieds/classifieds_rear.png"/>							
 							<h3>TA Performance 10-bolt Rear End Covers</h3>
 							<p>TA Performance's rear-end covers (girdles) are designed to improve ring and pinion gear life by pre-loading the bearing caps while also adding additional strength to your rear end housing.</p>
 
@@ -862,12 +870,13 @@
 					</ul>	
 				</div>
 			</div>
-		</div>	
-		
-<div data-role="page" id="mt" data-theme="a" style="background:url(bground2.jpg) repeat;">
+		</div>		
+
+
+<div data-role="page" id="mt" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Classifieds</h1>
 
@@ -876,7 +885,7 @@
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="classifieds_mt2.jpg" />
+							<img src="images/classifieds/classifieds_mt2.jpg" />
 
 							<h3>Mickey Thompson ET Street</h3>
 							<p style="text-shadow: none">
@@ -900,10 +909,10 @@
 			</div>
 		</div>			
 
-<div data-role="page" id="tach" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="tach" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Classifieds</h1>
 
@@ -912,7 +921,7 @@
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="classifieds_tach2.jpg" />
+							<img src="images/classifieds/classifieds_tach2.jpg" />
 
 							<h3>Auto Meter Phantom Series, 5" 10,000 RPM Pedestal Mount</h3>
 							<p style="text-shadow: none">
@@ -932,10 +941,10 @@
 			</div>
 		</div>				
 
-<div data-role="page" id="helmet" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="helmet" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>Classifieds</h1>
 
@@ -944,7 +953,7 @@
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="classifieds_helmet2.jpg" />
+							<img src="images/classifieds/classifieds_helmet2.jpg" />
 
 							<h3>Black-Ops Carbon Fiber Helmets </h3>
 							<p style="text-shadow: none">
@@ -975,10 +984,10 @@
 		</div>			
 
 
-<div data-role="page" id="tools" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="tools" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Classifieds</h1>
 
@@ -987,7 +996,7 @@
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="classifieds_tools2.jpg" />
+							<img src="images/classifieds/classifieds_tools2.jpg" />
 
 							<h3>LS- Valve Spring Compressor Tool </h3>
 							<p style="text-shadow: none">
@@ -1009,10 +1018,10 @@
 			</div>
 		</div>			
 
-<div data-role="page" id="rear" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="rear" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>Classifieds</h1>
 
@@ -1021,7 +1030,7 @@
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="classifieds_rear2.jpg" />
+							<img src="images/classifieds/classifieds_rear2.jpg" />
 
 							<h3>Rear End Covers </h3>
 							<p style="text-shadow: none">
@@ -1041,15 +1050,15 @@
 					</ul>	
 				</div>
 			</div>
-		</div>									
+		</div>														
 
 <!-- news section goes here -->
 
 
-	<div data-role="page" id="news" data-theme="a" style="background:url(bground2.jpg) repeat;">
+	<div data-role="page" id="news" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>News</h1>
 			</div>
@@ -1060,7 +1069,7 @@
 				<ul data-role="listview" data-inset="true" data-filter="true" data-theme="c">
 					<li>
 						<a href="#news_katech">	
-							<img src="news_katech.jpg" />
+							<img src="images/news/news_katech.jpg" />
 							<h3>2002 Camaro SS </h3>
 							<p>Marco Rodriguez’s ’02 SSS proves that a well thought out combination can be faster than the sum of its parts </p>
 							<p><span class="newswin"><em>Wednesday, July 11, 2012</em></span></p>
@@ -1068,7 +1077,7 @@
 					</li>
 					<li>
 						<a href="#news_camaros">	
-							<img src="news_camaros.jpg" />
+							<img src="images/news/news_camaros.jpg" />
 							<h3>2002 & 1998 Camaros</h3>
 							<p>R.P.M. Motorsports builds two Camaros that are as similar as they are different-one a 9-second SS nitrous car, the other a single-turbo Z28... more</p>
 							<p><span class="newswin"><em>Tuesday, July 10, 2012</em></span></p>
@@ -1077,7 +1086,7 @@
 					</li>
 					<li>
 						<a href="#news_caddy">	
-							<img src="news_caddy.jpg"/>							
+							<img src="images/news/news_caddy.jpg"/>							
 							<h3>2009 Cadillac CTS-V</h3>
 							<p>Manny Espino’s 9-second LSA-powered CTS-V turns up the heat in Miami</p>
 							<p><span class="newswin"><em>Sunday, July 8, 2012</em></span></p>
@@ -1086,7 +1095,7 @@
 					</li>
 					<li>
 						<a href="#news_gmc">	
-							<img src="news_gmc.jpg"/>							
+							<img src="images/news/news_gmc.jpg"/>							
 							<h3>1000-Plus-HP GM Pickup Trucks - Hayhauler And Lil' Sis 	1000-Plus-HP GM Pickup Trucks </h3>
 							<p>Flaco fanatics may now rejoice, as we finally show off Hayhauler and Lil' Sis in all their glory</p>
 							<p><span class="newswin"><em>Friday, July 6, 2012</em></span></p>
@@ -1095,7 +1104,7 @@
 					</li>
 					<li>
 						<a href="#news_gn">	
-							<img src="news_gn.jpg"/>							
+							<img src="images/news/news_gn.jpg"/>							
 							<h3>1987 Buick Regal</h3>
 							<p>Like many Turbo Buick owners, Jason Rusch had plenty of experience with Detroit muscle before he ever laid a hand on his '87 Turbo T... more</p>
 							<p><span class="newswin">em>Thursday, July 5, 2012</em></span></p>
@@ -1118,20 +1127,20 @@
 
 <!-- news one window drill down starts here for the news section -->
 
-<div data-role="page" id="news_katech" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="news_katech" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 							<h1>News</h1>
-							<!-- <h1><img src="branding_header.png" class="img" alt="Gear Heads"/></h1> -->
+							<!-- <h1><img src="images/branding_header.png" class="img" alt="Gear Heads"/></h1> -->
 
 			</div>
 <!-- content goes here --> 
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="news_pwraith.jpg" />
+							<img src="images/news/news_pwraith.jpg" />
 
 							<h3>2002 Camaro SS - Project Wraith</h3>
 							<p style="text-shadow: none">If you read the wrong magazines, peruse the wrong forums, or spend too much time looking through parts catalogs, you may come away with the general consensus that every single piece of your car, whether modified or stock, is a horrible piece of junk that's seconds away from exploding. <br /><br />We've all been there, researching the next high-tech part to buy when someone with a closet full of go-fast goodies, a drained bank account, and a car with enough parts to run <em>8's</em> that actually runs <em>12's</em> chimes in with, <br /><br />
@@ -1139,8 +1148,8 @@
 								<span class="newswin"><em>"That will never work! Those are junk and you can't ever go fast with them. My boy said..."</em></span><br /><br />
 
 							This happens, all day, every day to every type of enthusiast. Sometimes, this terrible advice leads to spending thousands upon thousands of dollars for a new engine only to find out it goes just a little faster than the "stock junk" and has oiling issues. <br /><br />For others, it can lead to part paralysis, a condition in which too many choices and too many opinions leads to never making a decision and instead deciding to just remain unhappy with your car, since everyone says it must be terrible.<br /><br />
-							<img src="news_pwraith2.jpg" />
-							<img src="news_pwraith3.jpg" />
+							<img src="images/news/news_pwraith2.jpg" />
+							<img src="images/news/news_pwraith3.jpg" />
 							</p>
 				</div>
 <!-- footer starts -->
@@ -1155,20 +1164,20 @@
 			</div>
 		</div>				
 
-<div data-role="page" id="news_camaros"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="news_camaros"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 							<h1>News</h1>
-							<!-- <h1><img src="branding_header.png" class="img" alt="Gear Heads"/></h1> -->
+							<!-- <h1><img src="images/branding_header.png" class="img" alt="Gear Heads"/></h1> -->
 
 							</div>
 <!-- content goes here --> 
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="news_camaros2.jpg" />
+							<img src="images/news/news_camaros2.jpg" />
 
 							<h3>2002 &amp; 1998 Chevy Camaros</h3>
 							<p style="text-shadow: none">Above these words are two completely different cars, built for completely different purposes for two completely different owners. On paper, they don't sound anything alike. One features a 402 cubic-inch LSX block with a single turbocharger and the other has a stock cubic-inch LS1 stuffed under the hood that huffs nitrous from a single fogger kit. One car rides on drag radials, the other on a slick. Silver SS, Silver Z28. It's amazing then to consider that these two cars are actually extremely similar in personality and form, even though they differ so drastically in function. So similar, in fact, that even after spending hours around them, it's hard to tell each apart, even knowing the differences.<br /><br />
@@ -1176,8 +1185,8 @@
 							<span class="newswin"><em>"How is it possible that two different owners, one from Wichita, TX and one from Durham, NC could go to one shop, ask for two completely different things and leave with cars that are both entirely unique and uniquely similar?"</em></span><br /><br />
 
 							The answer, actually, is the man behind the madness, Ryan Robinson, who is the owner of <em>R.P.M. Motorsports</em> and the key component of each and every car that comes out of his shop. <br /><br />
-							<img src="news_camaros3.jpg" />
-							<img src="news_camaros4.jpg" />
+							<img src="images/news/news_camaros3.jpg" />
+							<img src="images/news/news_camaros4.jpg" />
 							</p>
 				</div>
 <!-- footer starts -->
@@ -1192,20 +1201,20 @@
 			</div>
 		</div>				
 
-<div data-role="page" id="news_caddy"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="news_caddy"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 							<h1>News</h1>
-							<!-- <h1><img src="branding_header.png" class="img" alt="Gear Heads"/></h1> -->
+							<!-- <h1><img src="images/branding_header.png" class="img" alt="Gear Heads"/></h1> -->
 
 							</div>
 <!-- content goes here --> 
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="news_caddy2.jpg" />
+							<img src="images/news/news_caddy2.jpg" />
 
 							<h3>2009 Cadillac CTS-V</h3>
 							<p style="text-shadow: none">There's no easy way to say this...I hate Manny Espino. It's not anything against him personally, I am sure he is a great guy. And, it's not because he has done anything to offend me or some terrible act against society. Nope, I hate Manny for one, all-black, four-door supercharged reason. Manny not only drives one of my all-time dream cars but it runs 9.85, makes 865 rwhp, and he only bought it because he "was in need of a four-door car" to haul his wife and two kids around. I mean, "if you're going to have a four-door, it might as well be fast," right? Yeah, we all agree Manny, but did you have to go out and become the first 9-second LSA-powered CTS-V in the country to boot? Heck, the guy already owns an '86 Buick T-Type that runs 8.10 at 172, does he just sit around and build cars I've lusted after for years and then smash records with them? What a jerk!
@@ -1217,8 +1226,8 @@
 
 							Unfortunately, Manny had a slight miscalculation on his way into the 9's, pursuing a ZR1 supercharger system that didn't work out as planned. "The only bolt-on option at the time was the ZR1 blower option. It was a ZR1 blower modified to fit the CTS-V snout onto the ZR1 blower using the CTS-V lid and intercooler. That turned out to be a big waste of time and money.
 							 <br /><br />
-							<img src="news_caddy3.jpg" />
-							<img src="news_caddy4.jpg" />
+							<img src="images/news/news_caddy3.jpg" />
+							<img src="images/news/news_caddy4.jpg" />
 							</p>
 				</div>
 <!-- footer starts -->
@@ -1233,20 +1242,20 @@
 			</div>
 		</div>				
 
-<div data-role="page" id="news_gmc"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="news_gmc"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 							<h1>News</h1>
-							<!-- <h1><img src="branding_header.png" class="img" alt="Gear Heads"/></h1> -->
+							<!-- <h1><img src="images/branding_header.png" class="img" alt="Gear Heads"/></h1> -->
 
 							</div>
 <!-- content goes here --> 
 
 			<div data-role="content">
 				<!-- data -->	
-							<img src="news_gmc2.jpg" />
+							<img src="images/news/news_gmc2.jpg" />
 
 							<h3>1000-Plus-HP GM Pickup Trucks</h3>
 							<p style="text-shadow: none">The Hayhauler and Lil' Sis...you're either completely onboard and excited to read about Flaco's twin masterpieces or you're wondering if you accidentally picked up the wrong magazine. For the Flaco fanatics, you can just jump ahead to the next paragraph, since you already know that the Hayhauler has ran as fast as 8.40 at 162 mph in the quarter-mile and puts out over 1,700 turbocharger horsepower! And if you know about the Hayhauler, you can definitely skip ahead since we imagine you've spent a solid 45 minutes of your day watching Texas Mile videos of Lil' Sis going 199 mph in the Standing Mile. For the rest of you, you're probably no longer wondering why these trucks are in GMHTP but rather, why you don't know more about them.
@@ -1259,8 +1268,8 @@
 							Let's start with the Hayhauler, an LSX Shootout veteran and one of the coolest trucks ever built for LSX racing. Under the hood of this '04 Silverado, Flaco runs a 414 cubic-inch iron block LS that was built for him by Eric Koenig of HK Enterprises (HKE). For just any engine builder, this would have been a disaster in the making, but for Eric, an LS master, it's just another fun challenge to make the kind of power Flaco wants in a truck that weighs as much as it does. As you can imagine, the HKE 414 is stuffed with all of the good stuff from Callies and Wiseco and a large .700-inch lift hydraulic roller camshaft paired with Trick Flow 235cc heads to help funnel a ton of air into and out of the combustion chambers.
 
 							 <br /><br />
-							<img src="news_gmc3.jpg" />
-							<img src="news_gmc4.jpg" />
+							<img src="images/news/news_gmc3.jpg" />
+							<img src="images/news/news_gmc4.jpg" />
 							</p>
 				</div>
 <!-- footer starts -->
@@ -1275,13 +1284,13 @@
 			</div>
 		</div>						
 
-<div data-role="page" id="news_gn" data-theme="a" style="background:url(bground2.jpg) repeat;">
+<div data-role="page" id="news_gn" data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 		<div data-role="header" data-position="fixed">
-		<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
+		<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->	
 		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>				
 							<h1>News</h1>
-							<!-- <h1><img src="branding_header.png" class="img" alt="Gear Heads"/></h1> -->
+							<!-- <h1><img src="images/branding_header.png" class="img" alt="Gear Heads"/></h1> -->
 
 							</div>
 <!-- content goes here --> 
@@ -1300,8 +1309,8 @@
 
 							Instead of a simple valve seal replacement, shop number one left Schneider's beloved GNX stripped of most of its essential components and left to rot before he rescued it. Though a bit gun-shy, he then took the car back home to Las Vegas, Nevada where a local shop was to start the rebuild process, but soon got in over its head with more than just this build. Several years later Schneider showed up with a flatbed and title in hand as the police helped him remove it after the shop had gone under. When the crew at Insane Speed got their hands on Schneider's GNX #442, they were pretty much given carte blanche to make a streetcar to live up to the shop's name and reputation. With a history of building twin-turbo Gallardos, Supras, and just about anything else you can hang a big hairdryer on--Insane Speed knew exactly what to do.
 							 <br /><br />
-							<img src="news_gn3.jpg" />
-							<img src="news_gn4.jpg" />
+							<img src="images/news/news_gn3.jpg" />
+							<img src="images/news/news_gn4.jpg" />
 							</p>
 				</div>
 <!-- footer starts -->
@@ -1319,10 +1328,10 @@
 <!-- info section goes here -->
 
 
-	<div data-role="page" id="info"  data-theme="a" style="background:url(bground2.jpg) repeat;">
+	<div data-role="page" id="info"  data-theme="a" style="background:url(images/bground2.jpg) repeat;">
 
 			<div data-role="header" data-position="fixed">
-			<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->
+			<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->
 			<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>			
 			<h1>Info</h1>
 			</div>
@@ -1331,7 +1340,7 @@
 			<div data-role="content">
 
 				<!-- data -->
-				<img src="info.jpg" alt="info"/>
+				<img src="images/info.jpg" alt="info"/>
 					<p><strong>Gear Heads</strong><br />
 					6040 Brittmore Rd. Suite J<br />
 					Dallas, TX 75211<br /><br />
@@ -1356,7 +1365,7 @@
 <div data-role="page" id="custform" >
 
 	<div data-role="header" data-position="fixed">
-		<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
+		<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->	
 		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Customer Form</h1>
 		</div>
@@ -1435,9 +1444,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="#couchDB" data-icon="plus">Couch DB</a></li>
-					<li><a href="#" data-icon="plus">Ajax</a></li>
-					<li><a href="#" data-icon="grid" id="displaylink" data-transition="slideup" data-ajax="false">Local Storage</a></li>					
+					<li><a href="#ajax" data-icon="plus">Ajax</a></li>
+					<li><a href="#displaydata" data-icon="grid" id="displaylink" data-transition="slideup" data-ajax="false">Local Storage</a></li>					
 				</ul>
 			</div>
 		</div>
@@ -1454,11 +1462,12 @@
 			</ul>
 		</div>
 	</div>
+
 <!-- display data page for local storage -->
 
 	<div data-role="page" id="displaydata">
 		<div data-role="header" data-position="fixed">
-		<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
+		<!-- <img src="images/branding_header.png" class="brand"  alt="Gear Heads"/> -->	
 		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
 			<h1>Local Storage</h1>
 		</div>
@@ -1539,39 +1548,16 @@
 		</div>
 	</div>
 
-<!-- display data from couch DB -->
-
-	<div data-role="page" id="couchDB">
-		<div data-role="header" data-position="fixed">
-		<!-- <img src="branding_header.png" class="brand"  alt="Gear Heads"/> -->	
-		<a data-rel="back" data-icon="back" class="back, ui-btn-left">Back</a>
-			<h1>Couch DB</h1>
-		</div>
-
-<!-- couch db data goes here -->		
-		<div data-role="content" class="ui-body-c">
-		<div class="couch"></div><br />
-			<ul id="couchList" data-role="listview">
-			</ul>
-				
-		</div>
-
-
-	<!-- footer -->	
-		<div data-role="footer" data-theme="a" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="#custform" data-icon="plus" data-transition="slideup">Join Today!</a></li>
-					<!-- <li><a href="#displaydata" data-icon="grid" id="displaylink" >View</a></li>-->					
-				</ul>
-			</div>
-		</div>
-	</div>
-
-
 	<!-- JavaScript under here -->
-<script type="text/javascript" src="couch.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/json.js" ></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
 
 </body>
 </html>

@@ -140,7 +140,7 @@ $('#clearbutton').on('click', function(){ // clear button clears the data
 		var imageLi = document.createElement('li');
 		makeSubList.appendChild(imageLi);
 		var newImg = document.createElement('img');
-		var setSrc = newImg.setAttribute("src", ""+ catName + ".png");
+		var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
 		imageLi.appendChild(newImg);
 	};
 

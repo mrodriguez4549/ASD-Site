@@ -10,6 +10,7 @@
 .header h2 {
 	color: #6699cc;
 	text-align: left;
+	margin-left: 15px;
 }
 .ui-btn-up-c {
     border-top: 1px solid #ccc;
@@ -249,7 +250,7 @@ label.error{
 
 /* overrrides the standard jqm icons with my own icons */
 .ui-icon-gallery {
-	background-image: url("gallery.png");
+	background-image: url("../images/icons/gallery.png");
 	background-color: none;
     border: none;
     box-shadow: none;
@@ -258,7 +259,7 @@ label.error{
     margin-top: -11px !important; /* adjust vertical position (top value is set to 50%) */
 }
 .ui-icon-members {
-	background-image: url("members.png");
+	background-image: url("../images/icons/members.png");
 	background-color: none;
     border: none;
     width: 20px;
@@ -266,7 +267,7 @@ label.error{
     margin-top: -11px !important; /* adjust vertical position (top value is set to 50%) */
 }
 .ui-icon-resources {
-	background-image: url("resources.png");
+	background-image: url("../images/icons/resources.png");
 	background-color: none;
     border: none;
     box-shadow: none;
@@ -275,7 +276,7 @@ label.error{
     margin-top: -11px !important; /* adjust vertical position (top value is set to 50%) */
 }
 .ui-icon-classifieds {
-	background-image: url("classifieds.png");
+	background-image: url("../images/icons/classifieds.png");
 	background-color: none;
     border: none;
     box-shadow: none;
@@ -284,7 +285,7 @@ label.error{
     margin-top: -11px !important; /* adjust vertical position (top value is set to 50%) */
 }
 .ui-icon-news {
-	background-image: url("news.png");
+	background-image: url("../images/icons/news.png");
 	background-color: none;
     border: none;
     box-shadow: none;
